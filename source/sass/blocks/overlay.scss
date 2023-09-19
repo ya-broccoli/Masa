@@ -1,0 +1,16 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: $overlay-form;
+  opacity: 0.5;
+  z-index: 2;
+
+  display: none;
+}
+
+.overlay.is-active {
+  display: block;
+}

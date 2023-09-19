@@ -5,7 +5,7 @@
   font-weight: 300;
 
   display: flex;
-  width: 500px;
+  width: 100%;
   padding: 14px 0 10px 36px;
 
   @media screen and (max-width: 767px) {
@@ -14,10 +14,10 @@
   }
 
   &:last-of-type {
-    padding: 14px 0 58px 36px;
+    padding: 14px 0 0 0;
 
     @media screen and (max-width: 767px) {
-      padding: 14px 0 58px 0;
+      padding: 11px 0 31px;
     }
   }
 
@@ -33,14 +33,28 @@
 
   label {
     position: relative;
-
-    padding-left: 52px;
+    margin-bottom: 43px;
+    padding-left: 30px;
+    padding-top: 4px;
+    display: flex;
+    letter-spacing: 0.08px;
 
     cursor: pointer;
 
     span {
       margin-bottom: 0;
       margin-left: 0;
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    @media (max-width: 767px) {
+      padding-top: 0;
+      margin-bottom: 0;
+
+      span {
+        line-height: 14px;
+      }
     }
   }
 
@@ -50,12 +64,19 @@
       top: 0;
       left: 0;
 
-      width: 28px;
-      height: 28px;
+      width: 20px;
+      height: 20px;
 
-      border: 1.5px solid #2c39f2;
+      border: 1px solid rgba($color-default-white, 0.7);
+      background-color: $color-transparent;
+      border-radius: 2px;
 
       transition: border 0.3s ease;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $color-default-white;
+      }
 
       &::before {
         content: "";
@@ -71,6 +92,10 @@
         transform: translate(-50%, -50%);
 
         transition: background-color 0.3s ease;
+      }
+
+      @media (max-width: 767px) {
+        margin-top: 2px;
       }
     }
   }
@@ -109,16 +134,32 @@
   }
 
   input:checked + .custom-toggle__icon {
-    border: 1.5px solid #2c39f2;
+    border: 1px solid $color-default-white;
+    background-color: $color-default-white;
 
     &::before {
-      background-color: #2c39f2;
+      background-color: $color-cerulean-blue;
+      mask-image: url("../../img/svg/check.svg");
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 8px;
+      top: 9px;
+      left: 9px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-transparent;
+
+      &::before {
+        background-color: $color-default-white;
+      }
     }
   }
 
   &.is-invalid {
     label span {
-      color: #ff1553;
+      color: $color-wild-watermelon;
     }
   }
 
@@ -134,5 +175,64 @@
     &.is-valid {
       color: #15ab07;
     }
+  }
+}
+
+.custom-toggle input[disabled] + .custom-toggle__icon {
+  background-color: rgba($color-default-white, 0.6);
+  border-color: $color-default-white;
+  pointer-events: none;
+}
+
+.custom-toggle label:has(input:disabled) {
+  pointer-events: none;
+}
+
+.custom-toggle.is-invalid .custom-toggle__icon {
+  border: 1px solid $color-wild-watermelon;
+  background-color: rgba($color-wild-watermelon, 0.2);
+}
+
+.custom-toggle input:checked[disabled] + .custom-toggle__icon {
+  background-color: $color-mischka;
+  border-color: $color-mischka;
+
+  &::before {
+    background-color: rgba($color-default-white, 0.7);
+  }
+}
+
+.custom-toggle--checkbox .custom-toggle__icon--secondary {
+  border: 1px solid rgba($color-charcoal, 0.3);
+
+  &:hover {
+    border: 1px solid $color-charcoal;
+  }
+}
+
+.custom-toggle--secondary input:checked + .custom-toggle__icon {
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-cerulean-blue;
+
+  &::before {
+    background-color: $color-default-white;
+  }
+
+  &:hover {
+    background-color: $color-transparent;
+    border: 1px solid $color-charcoal;
+
+    &::before {
+      background-color: $color-charcoal;
+    }
+  }
+}
+
+.custom-toggle--secondary input:checked[disabled] + .custom-toggle__icon {
+  background-color: $color-mischka;
+  border: 1px solid $color-mischka;
+
+  &::before {
+    background-color: rgba($color-default-white, 0.7);
   }
 }

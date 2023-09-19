@@ -1,0 +1,384 @@
+.hero {
+  margin-top: -114px;
+  background-color: $color-alabaster;
+  min-height: 800px;
+
+  @include vp-767 {
+    min-height: 568px;
+  }
+}
+
+.hero__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.hero__item {
+  position: relative;
+  min-height: 800px;
+
+  @include vp-767 {
+    min-height: 568px;
+  }
+}
+
+.hero__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 419px 5px 61px 4px;
+  margin: 0 auto;
+
+  &--study {
+    padding: 409px 5px 48px;
+  }
+
+  @include vp-1199 {
+    padding: 696px 0 59px 45px;
+
+    &--study {
+      padding: 677px 0 59px 45px;
+    }
+  }
+
+  @include vp-767 {
+    padding: 260px 15px 36px 15px;
+
+    &--study {
+      padding: 234px 15px 36px 15px;
+    }
+  }
+}
+
+.hero__content .hero__pagination {
+  position: relative;
+  bottom: 0;
+  width: 95px;
+  min-height: 38px;
+  padding: 14px 20px 15px 20px;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  gap: 0 12px;
+  background-color: $color-default-white;
+
+  @include vp-1199 {
+    padding: 14px 20px 13px;
+  }
+
+  @include vp-767 {
+    padding: 9px 15px 9px;
+    border-radius: 12px 12px 0 0;
+    width: 80px;
+    min-height: 27px;
+  }
+}
+
+.hero__pagination {
+  height: auto;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 19px;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../../img/svg/angle-top.svg");
+    background-repeat: no-repeat;
+  }
+
+  @include vp-1199 {
+    &::after {
+      top: 17px;
+      right: -20px;
+    }
+  }
+
+  @include vp-767 {
+    &::after {
+      background-image: url("../../img/svg/angle-top-mob.svg");
+      width: 10px;
+      height: 10px;
+      top: 18px;
+      right: -10px;
+    }
+  }
+}
+
+.hero__title {
+  margin: 0;
+  padding: 41px 49px 28px 50px;
+  color: $color-cerulean-blue;
+  background-color: $color-default-white;
+  border-radius: 0 30px 30px 0;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 62px;
+  width: 78%;
+
+  @include vp-1199 {
+    font-size: 36px;
+    line-height: 44px;
+    width: 91.1%;
+    padding: 31px 39px 24px 39px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 26px;
+    width: 100%;
+    padding: 20px 12px 15px 14px;
+    border-radius: 0 16px 16px 0;
+
+    &--study {
+      padding: 22px 21px 15px 14px;
+    }
+  }
+}
+
+.hero__info {
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 62.3%;
+  padding: 0 50px 34px;
+  background-color: $color-default-white;
+  border-radius: 0 0 30px 30px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -19px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../../img/svg/angle-bottom.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--study {
+    padding: 0 50px 27px;
+    width: 62.2%;
+  }
+
+  @include vp-1199 {
+    padding: 0 39px 33px 41px;
+    line-height: 20px;
+    width: 81.6%;
+    margin-top: -8px;
+
+    &::after {
+      top: 7px;
+    }
+
+    &--study {
+      margin-top: 0;
+
+      &::after {
+        top: 0;
+      }
+    }
+  }
+
+  @include vp-767 {
+    padding: 0;
+    width: 89.6%;
+    flex-direction: column;
+    background-color: $color-transparent;
+
+    &::after {
+      background-image: url("../../img/svg/angle-bottom-mob.svg");
+      width: 10px;
+      height: 10px;
+      top: 8px;
+      right: -10px;
+    }
+
+    &--study {
+      &::after {
+        top: 0;
+      }
+    }
+  }
+}
+
+.hero__info-text {
+  width: 446px;
+  margin-bottom: 0;
+  margin-top: 3px;
+  line-height: 26px;
+
+  &--study {
+    margin-top: -5px;
+    width: 67%;
+    line-height: 26px;
+  }
+
+  @include vp-1199 {
+    line-height: 20px;
+
+    &--study {
+      width: 57%;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    width: 100%;
+    background-color: $color-default-white;
+    border-radius: 0 0 14px 0;
+    padding: 1px 10px 11px 14px;
+
+    &--study {
+      padding: 0 14px 10px 14px;
+    }
+  }
+}
+
+.hero__button-wrapper {
+  align-self: center;
+  margin-top: 5px;
+
+  &--study {
+    margin-top: -2px;
+  }
+
+  @include vp-1199 {
+    margin-top: 11px;
+
+    &--study {
+      margin-top: -16px;
+    }
+  }
+
+  @include vp-767 {
+    position: relative;
+    max-width: 71%;
+    margin-top: 0;
+    padding: 16px 15px 12px;
+    align-self: self-start;
+    background-color: $color-default-white;
+    border-radius: 0 0 14px 14px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-image: url("../../img/svg/angle-bottom-mob.svg");
+      background-repeat: no-repeat;
+      top: 0;
+      right: -9px;
+    }
+
+    &--study {
+      padding: 16px 15px 12px;
+    }
+  }
+}
+
+.hero__button {
+  position: relative;
+  min-width: 196px;
+  padding: 20px 30px;
+  margin-top: -5px;
+  transition: all 0.3s ease;
+
+  &::after {
+    top: 4px;
+    right: 4px;
+  }
+
+  @include vp-767 {
+    padding: 13px 7px 13px 20px;
+    min-width: 152px;
+
+    &::after {
+      top: 2px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:active {
+    background-color: $color-cerulean-blue;
+    color: rgba($color-default-white, 0.7);
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+}
+
+.hero__button:hover .hero__button-icon,
+.hero__button:focus .hero__button-icon {
+  stroke: $color-endeavour;
+  transform: rotate(45deg);
+}
+
+.hero__button.is-disabled {
+  background-color: $color-transparent;
+  color: $color-mischka;
+  border: 1px solid $color-mischka;
+
+  pointer-events: none;
+
+  &::after {
+    background-color: $color-mischka;
+  }
+}
+
+.hero__button.is-disabled .hero__button-icon {
+  stroke: rgba($color-default-white, 0.7);
+}
+
+.hero__button-icon {
+  position: absolute;
+  right: 21px;
+  top: 22px;
+  z-index: 1;
+  stroke: $color-default-white;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+    right: 16px;
+    top: 15px;
+  }
+}
+
+.hero__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-photo;
+  }
+
+  @include vp-767 {
+    height: 568px;
+  }
+}
+
+.hero__background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

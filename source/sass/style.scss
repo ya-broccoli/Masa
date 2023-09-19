@@ -2,8 +2,23 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+
 // Swiper 7.4.1
-// @import "vendor/swiper";
+
+@import "vendor/swiper";
+
+// Leaflet
+
+@import "vendor/leaflet";
+
+// CustomSelect
+
+@import "vendor/custom-select";
+
+//Accordion
+
+@import "vendor/accordion.scss";
+@import "vendor/data-accordion.scss";
 
 // Global
 // ---------------------------------
@@ -18,11 +33,25 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
+@import "blocks/button";
 @import "blocks/modal";
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/footer";
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/contacts";
+@import "blocks/faq";
+@import "blocks/reviews";
+@import "blocks/news";
+@import "blocks/title";
+@import "blocks/programs";
+@import "blocks/participation";
+@import "blocks/feedback";
+@import "blocks/overlay";
 
 // ---------------------------------
 

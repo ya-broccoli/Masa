@@ -1,0 +1,52 @@
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid $color-cerulean-blue;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  color: $color-cerulean-blue;
+
+  background-color: $color-default-white;
+  cursor: pointer;
+  user-select: none;
+
+  transition: opacity $trans-default;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 46px;
+    height: 46px;
+    background-color: $color-cerulean-blue;
+    border-radius: 50%;
+
+    @include vp-767 {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  &:disabled {
+    background-color: $color-transparent;
+    color: $color-mischka;
+    border: 1px solid $color-mischka;
+
+    pointer-events: none;
+
+    &::after {
+      background-color: $color-mischka;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+  }
+}

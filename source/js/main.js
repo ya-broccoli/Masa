@@ -1,6 +1,15 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {initHeroSlider} from './modules/sliders/init-hero-slider';
+import {initNavToggles} from './modules/nav-toggle/init-nav-toggle';
+import {initAccordions} from './modules/accordion/init-accordion';
+import {initProgramsSlider} from './modules/sliders/init-programs-slider';
+import {initNewsSlider} from './modules/sliders/init-news-slider';
+import {initReviewsSlider} from './modules/sliders/init-reviews-slider';
+import {initMap} from './modules/map/init-map';
+import {CustomSelect} from './modules/select/custom-select';
+import {toggleCurrent} from './modules/news/init-news-toggle';
 
 // ---------------------------------
 
@@ -14,13 +23,26 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
+  initNavToggles();
+  initAccordions();
+  initHeroSlider();
+  initProgramsSlider();
+  initNewsSlider();
+  initReviewsSlider();
+  initMap();
+  toggleCurrent();
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+
     const form = new Form();
     window.form = form;
     form.init();
+
+    const select = new CustomSelect();
+    select.init();
   });
 });
 

@@ -3,56 +3,75 @@
   position: relative;
 
   display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
+  width: 350px;
+  padding: 15px 0 2px;
+
+  &--secondary {
+    padding: 17px 0 2px;
+  }
 
   @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
+    padding: 4px 0 11px;
     width: 100%;
   }
 
   label {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
     width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba($color-alabaster, 0.8);
 
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
+    @media (max-width: 767px) {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    textarea {
+      height: 98px;
+
+      @media (max-width: 767px) {
+        height: 94px;
+      }
     }
 
     input,
     textarea {
       flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
+      max-width: 350px;
+      min-height: 50px;
       padding: 10px;
-
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
+      background-color: $color-transparent;
+      border: 1px solid rgba($color-default-white, 0.3);
+      border-radius: 8px;
       outline: none;
+      color: $color-default-white;
 
       transition: border 0.3s ease;
 
       @media screen and (max-width: 767px) {
         max-width: unset;
         width: 100%;
+        min-height: 44px;
       }
 
       &:hover {
-        border: 2px solid rgba(#000000, 0.5);
+        border: 1px solid $color-default-white;
       }
 
+      &:active,
       &:focus {
-        border: 2px solid rgba(#000000, 0.8);
+        border: 1px solid $color-default-white;
       }
-    }
-  }
 
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
+      &:disabled {
+        border: 1px solid rgba($color-default-white, 0.4);
+        background-color: rgba($color-default-white, 0.2);
+        pointer-events: none;
+      }
     }
   }
 
@@ -75,11 +94,12 @@
   &.is-invalid {
     input,
     textarea {
-      border: 2px solid #ff1553;
+      border: 1px solid $color-wild-watermelon;
+      background-color: rgba(255, 94, 102, 0.2);
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        border: 1px solid rgba($color-wild-watermelon, 0.5);
       }
     }
   }
@@ -108,4 +128,33 @@
       color: #15ab07;
     }
   }
+}
+
+.custom-input--secondary label {
+  input {
+    border: 1px solid rgba($color-charcoal, 0.3);
+    color: $color-charcoal;
+    padding: 10px;
+
+    &:hover {
+      border: 1px solid $color-charcoal;
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid $color-charcoal;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      border: 1px solid rgba($color-mischka, 0.5);
+      background-color: rgba($color-mischka, 0.2);
+    }
+  }
+}
+
+.custom-input__label--secondary {
+  color: rgba($color-charcoal, 0.8);
+  font-size: 14px;
+  line-height: 14px;
 }

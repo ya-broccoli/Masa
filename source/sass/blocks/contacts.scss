@@ -1,0 +1,162 @@
+.contacts {
+  min-height: 891px;
+  padding: 119px 0 119px 0;
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    padding: 94px 0 100px;
+  }
+
+  @include vp-767 {
+    min-height: 561px;
+    padding: 55px 0 67px;
+  }
+}
+
+.contacts__header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 77px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgba($color-default-white, 0.2);
+    bottom: -37px;
+  }
+
+  @include vp-1199 {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 58px;
+
+    &::after {
+      bottom: -27px;
+    }
+  }
+
+  @include vp-767 {
+    margin-bottom: 54px;
+
+    &::after {
+      bottom: -24px;
+    }
+  }
+}
+
+.contacts__title {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 50px;
+  margin: 0;
+  margin-top: 5px;
+
+  @include vp-1199 {
+    font-size: 34px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 14px;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 51px;
+  max-width: 604px;
+
+  @include vp-1199 {
+    gap: 88px;
+    max-width: 100%;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 13px;
+  }
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 268px;
+  gap: 17px;
+
+  @include vp-767 {
+    gap: 8px;
+    max-width: 100%;
+  }
+}
+
+.contacts__item span {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  color: $color-alabaster;
+}
+
+.contacts__item p {
+  margin: 0;
+
+  @include vp-1199 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.contacts__item a {
+  color: $color-default-white;
+  cursor: pointer;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 23px;
+    margin-top: -1px;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $color-default-white;
+  }
+
+  &:active {
+    color: rgba($color-default-white, 0.7);
+    border: none;
+  }
+}
+
+.contacts__map img {
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contacts__map {
+  border-radius: 16px;
+  width: 100%;
+  height: 500px;
+
+  @include vp-1199 {
+    height: 500px;
+  }
+
+  @include vp-767 {
+    height: 240px;
+  }
+}
