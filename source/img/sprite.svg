@@ -44,8 +44,8 @@
   <symbol viewBox="0 0 18 18" id="close">
     <path d="M1 17L9 9M9 9L17 1M9 9L17 17M9 9L1 1" stroke="" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
-  <symbol viewBox="0 0 22 22" id="modal-close">
-    <path d="M2 20L11 11M11 11L20 2M11 11L20 20M11 11L2 2" stroke="#316DC2" stroke-linecap="round" stroke-linejoin="round"/>
+  <symbol viewBox="0 0 20 20" id="modal-close">
+    <path d="M1 19L10 10M10 10L19 1M10 10L19 19M10 10L1 1" stroke="#316DC2" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
   <symbol viewBox="0 0 10 8" id="tick">
     <path d="M1 3.5L3.94737 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round"/>

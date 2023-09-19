@@ -86,6 +86,8 @@
 .feedback__image {
   position: absolute;
   inset: 0;
+  background-color: $color-endeavour;
+  border-radius: 16px;
 }
 
 .feedback__image img {

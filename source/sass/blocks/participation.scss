@@ -62,7 +62,21 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 16px;
+}
+
+.participation__image {
+  background-color: $color-endeavour;
+  border-radius: 30px;
+  min-height: 363px;
+
+  @include vp-1199 {
+    min-height: 375px;
+  }
+
+  @include vp-767 {
+    min-height: 200px;
+  }
 }
 
 .participation__description p {

@@ -132,7 +132,8 @@
   position: relative;
   max-width: 286px;
   border-radius: 12px;
-  background-color: $color-alabaster;
+  background-color: $color-mischka;
+  height: auto;
 
   @include vp-1199 {
     max-width: 100%;
@@ -244,7 +245,7 @@
   @include vp-767 {
     font-size: 16px;
     line-height: 18px;
-    max-width: calc(76% + 1px);
+    max-width: calc(46% + 1px);
     padding: 11px 9px 1px 0;
   }
 }

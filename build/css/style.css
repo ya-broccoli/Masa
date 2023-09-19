@@ -3034,8 +3034,8 @@ button,
 }
 .custom-toggle input:checked + .custom-toggle__icon::before {
   background-color: #316dc2;
-  -webkit-mask-image: url("../../img/svg/check.svg");
-          mask-image: url("../../img/svg/check.svg");
+  -webkit-mask-image: url("../img/svg/check.svg");
+          mask-image: url("../img/svg/check.svg");
   background-repeat: no-repeat;
   width: 10px;
   height: 8px;
@@ -4457,7 +4457,7 @@ button,
 }
 .about__button::after {
   right: 4px;
-  top: 4px;
+  top: 3px;
 }
 @media (max-width: 1199px) {
   .about__button {
@@ -4867,6 +4867,7 @@ button,
   border-radius: 16px;
   width: 100%;
   height: 500px;
+  background-color: #275699;
 }
 @media (max-width: 1199px) {
   .contacts__map {
@@ -5298,6 +5299,13 @@ button,
   }
 }
 
+.reviews__image {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  background-color: #a9afb7;
+}
+
 .reviews__avatar img {
   border-radius: 50%;
   width: 100%;
@@ -5682,7 +5690,8 @@ button,
   position: relative;
   max-width: 286px;
   border-radius: 12px;
-  background-color: #f0efe9;
+  background-color: #a9afb7;
+  height: auto;
 }
 @media (max-width: 1199px) {
   .news__item {
@@ -5795,7 +5804,7 @@ button,
   .news__item-info h3 {
     font-size: 16px;
     line-height: 18px;
-    max-width: calc(76% + 1px);
+    max-width: calc(46% + 1px);
     padding: 11px 9px 1px 0;
   }
 }
@@ -6209,7 +6218,8 @@ button,
 .programs__item {
   position: relative;
   border-radius: 12px;
-  background-color: #f0efe9;
+  height: auto;
+  background-color: #a9afb7;
 }
 
 .programs__image img {
@@ -6547,7 +6557,23 @@ button,
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 18px;
+  border-radius: 16px;
+}
+
+.participation__image {
+  background-color: #275699;
+  border-radius: 30px;
+  min-height: 363px;
+}
+@media (max-width: 1199px) {
+  .participation__image {
+    min-height: 375px;
+  }
+}
+@media (max-width: 767px) {
+  .participation__image {
+    min-height: 200px;
+  }
 }
 
 .participation__description p {
@@ -6754,6 +6780,8 @@ button,
 .feedback__image {
   position: absolute;
   inset: 0;
+  background-color: #275699;
+  border-radius: 16px;
 }
 
 .feedback__image img {

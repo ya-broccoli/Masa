@@ -96,6 +96,13 @@
   }
 }
 
+.reviews__image {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  background-color: $color-mischka;
+}
+
 .reviews__avatar img {
   border-radius: 50%;
   width: 100%;

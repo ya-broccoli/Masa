@@ -151,6 +151,7 @@
   border-radius: 16px;
   width: 100%;
   height: 500px;
+  background-color: $color-endeavour;
 
   @include vp-1199 {
     height: 500px;
