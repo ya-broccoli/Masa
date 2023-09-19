@@ -1,12 +1,11 @@
 const heroSlider = document.querySelector('.hero__slider');
-const heroSliderPagination = document.querySelector('.swiper-pagination');
 
 const initHeroSlider = () => {
   if (heroSlider) {
     return new window.Swiper(heroSlider, {
 
       pagination: {
-        el: heroSliderPagination,
+        el: '.hero__pagination',
         type: 'bullets',
         clickable: true,
       },

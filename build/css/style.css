@@ -4021,7 +4021,7 @@ button,
   right: -20px;
   width: 20px;
   height: 20px;
-  background-image: url("../../img/svg/angle-top.svg");
+  background-image: url("../img/svg/angle-top.svg");
   background-repeat: no-repeat;
 }
 @media (max-width: 1199px) {
@@ -4032,7 +4032,7 @@ button,
 }
 @media (max-width: 767px) {
   .hero__pagination::after {
-    background-image: url("../../img/svg/angle-top-mob.svg");
+    background-image: url("../img/svg/angle-top-mob.svg");
     width: 10px;
     height: 10px;
     top: 18px;
@@ -4093,7 +4093,7 @@ button,
   right: -19px;
   width: 20px;
   height: 20px;
-  background-image: url("../../img/svg/angle-bottom.svg");
+  background-image: url("../img/svg/angle-bottom.svg");
   background-repeat: no-repeat;
 }
 .hero__info--study {
@@ -4128,7 +4128,7 @@ button,
     background-color: rgba(255, 255, 255, 0);
   }
   .hero__info::after {
-    background-image: url("../../img/svg/angle-bottom-mob.svg");
+    background-image: url("../img/svg/angle-bottom-mob.svg");
     width: 10px;
     height: 10px;
     top: 8px;
@@ -4205,7 +4205,7 @@ button,
     content: "";
     width: 10px;
     height: 10px;
-    background-image: url("../../img/svg/angle-bottom-mob.svg");
+    background-image: url("../img/svg/angle-bottom-mob.svg");
     background-repeat: no-repeat;
     top: 0;
     right: -9px;
@@ -5752,12 +5752,12 @@ button,
   background-repeat: no-repeat;
 }
 .news__item-info time::before {
-  background-image: url("../../img/svg/angle-beige.svg");
+  background-image: url("../img/svg/angle-beige.svg");
   top: -15px;
   left: 0;
 }
 .news__item-info time::after {
-  background-image: url("../../img/svg/angle-beige.svg");
+  background-image: url("../img/svg/angle-beige.svg");
   bottom: 1px;
   right: -15px;
 }
@@ -5780,7 +5780,7 @@ button,
   width: 16px;
   height: 16px;
   background-repeat: no-repeat;
-  background-image: url("../../img/svg/angle-beige.svg");
+  background-image: url("../img/svg/angle-beige.svg");
   bottom: 0;
   right: -15px;
 }
@@ -5870,7 +5870,7 @@ button,
   width: 16px;
   height: 16px;
   background-repeat: no-repeat;
-  background-image: url("../../img/svg/angle-beige.svg");
+  background-image: url("../img/svg/angle-beige.svg");
   bottom: 1px;
   right: -15px;
 }
@@ -6263,7 +6263,7 @@ button,
   height: 20px;
   bottom: 1px;
   right: -19px;
-  background-image: url("../../img/svg/angle-top.svg");
+  background-image: url("../img/svg/angle-top.svg");
   background-repeat: no-repeat;
 }
 @media (max-width: 1199px) {
