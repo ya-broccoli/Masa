@@ -13,8 +13,12 @@
   }
 
   @media screen and (max-width: 767px) {
-    padding: 26px 0 5px;
+    padding: 33px 0 5px;
     width: 100%;
+
+    &--secondary {
+      padding: 26px 0 5px;
+    }
   }
 
   &__label {
@@ -36,9 +40,13 @@
     }
 
     @media screen and (max-width: 767px) {
-      font-size: 14px;
+      font-size: 12px;
       line-height: 14px;
       top: 15%;
+
+      &--secondary {
+        font-size: 14px;
+      }
     }
   }
 
@@ -89,10 +97,6 @@
     cursor: pointer;
 
     transition: border 0.3s ease;
-
-    @include vp-767 {
-      height: 44px;
-    }
 
     &:hover {
       border: 2px solid $color-default-white;
@@ -361,6 +365,10 @@
     pointer-events: none;
     border: 1px solid rgba($color-mischka, 0.5);
     background-color: rgba($color-mischka, 0.2);
+  }
+
+  @include vp-767 {
+    height: 44px;
   }
 }
 

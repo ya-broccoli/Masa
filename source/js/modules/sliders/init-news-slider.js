@@ -31,24 +31,22 @@ const initNewsSlider = () => {
           },
         },
         768: {
+          updateOnWindowResize: true,
           slidesPerView: 2,
           grid: {
             rows: 2,
             fill: 'row',
           },
-          slidesPerGroup: 2,
-          slidesPerColumn: 2,
           spaceBetween: 30,
         },
         320: {
+          updateOnWindowResize: true,
           slidesPerView: 1,
           spaceBetween: 20,
           grid: {
             rows: 2,
             fill: 'row',
           },
-          slidesPerGroup: 1,
-          slidesPerColumn: 2,
         },
       },
     });

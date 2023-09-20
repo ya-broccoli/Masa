@@ -15,7 +15,6 @@
   display: grid;
   grid-template-columns: min-content 1fr auto;
   gap: 8px 50px;
-  align-items: center;
 
   @include vp-1199 {
     grid-template-columns: min-content 1fr;

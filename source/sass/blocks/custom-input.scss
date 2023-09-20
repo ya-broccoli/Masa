@@ -11,7 +11,7 @@
   }
 
   @media screen and (max-width: 767px) {
-    padding: 4px 0 11px;
+    padding: 4px 0 14px;
     width: 100%;
   }
 
@@ -55,7 +55,6 @@
       @media screen and (max-width: 767px) {
         max-width: unset;
         width: 100%;
-        min-height: 44px;
       }
 
       &:hover {
@@ -135,6 +134,7 @@
     border: 1px solid rgba($color-charcoal, 0.3);
     color: $color-charcoal;
     padding: 10px;
+    min-height: 44px;
 
     &:hover {
       border: 1px solid $color-charcoal;
@@ -157,4 +157,8 @@
   color: rgba($color-charcoal, 0.8);
   font-size: 14px;
   line-height: 14px;
+}
+
+.custom-input--secondary {
+  padding: 4px 0 11px 0;
 }

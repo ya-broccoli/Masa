@@ -101,6 +101,11 @@
   width: 90px;
   height: 90px;
   background-color: $color-mischka;
+
+  @include vp-767 {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .reviews__avatar img {

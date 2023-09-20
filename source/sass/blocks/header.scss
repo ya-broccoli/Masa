@@ -23,6 +23,11 @@
   &:focus {
     outline: none;
   }
+
+  &:hover {
+    outline: 1px solid $color-cerulean-blue;
+    opacity: 0.7;
+  }
 }
 
 .header__toggle {
