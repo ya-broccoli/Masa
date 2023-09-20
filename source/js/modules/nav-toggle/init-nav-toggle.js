@@ -40,12 +40,6 @@ const initNavToggles = () => {
       document.addEventListener('keydown', escapePress);
     }
   });
-
-  // navLinks.forEach((link) => {
-  //   link.addEventListener('click', () => {
-  //     closeMenu();
-  //   });
-  // });
 };
 
 export {initNavToggles};

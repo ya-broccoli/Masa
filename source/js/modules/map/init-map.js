@@ -1,4 +1,4 @@
-import {map as createMap, tileLayer as createTileLayer, icon as createIcon, marker as createMarker} from '../../vendor/leaflet';
+const L = window.L;
 const myMap = document.querySelector('#map');
 
 const initMap = () => {
@@ -13,19 +13,19 @@ const initMap = () => {
       scrollWheelZoom: false,
     };
 
-    const map = createMap('map', mapOptions);
+    const map = L.map('map', mapOptions);
 
-    const tileLayer = createTileLayer(url);
+    const tileLayer = L.tileLayer(url);
 
     tileLayer.addTo(map);
 
-    const icon = createIcon({
+    const icon = L.icon({
       iconUrl: './img/svg/pin.svg',
       iconSize: [70, 70],
       iconAnchor: [40, 70],
     });
 
-    const marker = createMarker(coordinate, {icon});
+    const marker = L.marker(coordinate, {icon});
 
     marker.addTo(map);
   }

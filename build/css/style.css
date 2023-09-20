@@ -3642,7 +3642,7 @@ button,
   color: #ffffff;
 }
 
-.nav__subnav-list {
+.nav__sub-nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -3656,7 +3656,7 @@ button,
   gap: 5px 0;
 }
 
-.nav__subnav-list a {
+.nav__sub-nav-list a {
   list-style: none;
   margin: 0;
   padding: 0;
