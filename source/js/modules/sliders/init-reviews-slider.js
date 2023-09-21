@@ -16,7 +16,7 @@ const initReviewsSlider = () => {
         768: {
           slidesPerView: 'auto',
           spaceBetween: 30,
-          allowTouchMove: false,
+          allowTouchMove: true,
         },
         0: {
           slidesPerView: 1,

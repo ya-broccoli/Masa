@@ -16,7 +16,7 @@ const initProgramsSlider = () => {
         768: {
           slidesPerView: 2,
           spaceBetween: 30,
-          allowTouchMove: false,
+          allowTouchMove: true,
         },
         0: {
           slidesPerView: 1,

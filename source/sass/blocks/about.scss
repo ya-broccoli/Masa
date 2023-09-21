@@ -111,10 +111,10 @@
 .about__button {
   padding: 20px 80px 20px 29px;
   transition: all 0.3s ease;
+  background-color: $color-transparent;
 
   &::after {
     right: 4px;
-    top: 3px;
   }
 
   @include vp-1199 {
@@ -129,6 +129,7 @@
   &:focus {
     background-color: $color-cerulean-blue;
     color: $color-default-white;
+    outline: none;
 
     &::after {
       background-color: $color-default-white;

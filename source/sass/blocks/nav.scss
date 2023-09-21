@@ -15,10 +15,18 @@
   transform: translate(0, 0) scale(1);
   z-index: 2;
 
+  &.nav__link {
+    cursor: pointer;
+  }
+
   @include vp-767 {
     width: 100%;
     top: 80px;
   }
+}
+
+.nav.is-opened .nav__link {
+  cursor: pointer;
 }
 
 .nav__list {
@@ -44,6 +52,7 @@
   &:hover,
   &:focus {
     color: $color-default-white;
+    outline: none;
   }
 }
 

@@ -49,6 +49,7 @@
   &:hover,
   &:focus {
     background-color: $color-default-white;
+    outline: none;
   }
 
   &:active {
@@ -59,6 +60,7 @@
 .faq__item:hover .faq__button,
 .faq__item:focus .faq__button {
   background-color: $color-transparent;
+  outline: none;
 }
 
 .faq__item:hover .faq__button-icon,

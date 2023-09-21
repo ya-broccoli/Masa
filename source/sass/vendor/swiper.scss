@@ -297,6 +297,12 @@
   background: transparent;
   border: 1px solid #316DC2;
   // opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+
+  &:hover,
+  &:focus {
+    border: 1px solid #316dc2;
+    outline: none;
+  }
 }
 button.swiper-pagination-bullet {
   border: none;

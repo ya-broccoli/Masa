@@ -1,45 +1,46 @@
-const navMain = document.querySelector('.header__nav');
-const navToggle = document.querySelector('.header__toggle');
-// const navLinks = document.querySelectorAll('.header__link');
-const overlay = document.querySelector('.overlay');
-
 const initNavToggles = () => {
+  const OPENED_CLASS = 'is-opened';
+  const LINK_CLASS = 'a';
+  const root = document.querySelector('.header');
+  const toggle = root.querySelector('.header__toggle');
+  const nav = root.querySelector('.nav');
+
+  const onDocumentKeydown = (evt) => {
+    return evt.key === 'Escape' ? closeMenu() : null;
+  };
+
+  const onLinkClick = (evt) => {
+    return (evt.target.matches(LINK_CLASS) && !evt.target.matches('.nav__link--button')) ? closeMenu() : null;
+  };
+
+  const isMenu = (evt) => {
+    return (evt.target.closest('.header') && evt.target.closest('.header__toggle') || evt.target.closest('.nav')) ? evt.preventDefault() : closeMenu();
+  };
+
+  const openMenu = () => {
+    root.classList.add(OPENED_CLASS);
+    toggle.classList.add(OPENED_CLASS);
+    nav.classList.add(OPENED_CLASS);
+    document.addEventListener('keydown', onDocumentKeydown);
+    document.addEventListener('click', isMenu);
+    nav.addEventListener('click', onLinkClick);
+    window.scrollLock.disableScrolling();
+  };
 
   const closeMenu = () => {
-    navMain.classList.remove('is-opened');
-    navMain.classList.add('is-closed');
-    navToggle.classList.remove('is-opened');
+    root.classList.remove(OPENED_CLASS);
+    toggle.classList.remove(OPENED_CLASS);
+    nav.classList.remove(OPENED_CLASS);
+    document.removeEventListener('keydown', onDocumentKeydown);
+    document.removeEventListener('click', isMenu);
+    nav.removeEventListener('click', onLinkClick);
     window.scrollLock.enableScrolling();
-    overlay.classList.remove('is-active');
-    document.removeEventListener('click', clickOutsideMenu);
-    document.removeEventListener('keydown', escapePress);
   };
 
-  const clickOutsideMenu = (event) => {
-    if (!navMain.contains(event.target) && !navToggle.contains(event.target)) {
-      closeMenu();
-    }
-  };
-
-  const escapePress = (event) => {
-    if (event.key === 'Escape') {
-      closeMenu();
-    }
-  };
-
-  navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('is-opened')) {
-      closeMenu();
-    } else {
-      navMain.classList.remove('is-closed');
-      navMain.classList.add('is-opened');
-      navToggle.classList.add('is-opened');
-      window.scrollLock.disableScrolling();
-      overlay.classList.add('is-active');
-      document.addEventListener('click', clickOutsideMenu);
-      document.addEventListener('keydown', escapePress);
-    }
+  toggle.addEventListener('click', () => {
+    return !toggle.classList.contains(OPENED_CLASS) ? openMenu() : closeMenu();
   });
+
 };
 
 export {initNavToggles};

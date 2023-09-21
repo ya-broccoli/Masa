@@ -90,9 +90,10 @@
   gap: 15px;
 
   @include vp-767 {
-    gap: 0 9px;
+    gap: 0 10px;
     max-width: 62%;
     align-items: center;
+    justify-content: start;
   }
 }
 
@@ -272,6 +273,7 @@
   &:hover,
   &:focus {
     background-color: $color-default-white;
+    outline: none;
   }
 
   &:disabled {
