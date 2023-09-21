@@ -63,14 +63,21 @@
     font-family: $ff-manrope;
     line-height: 26px;
     width: 510px;
+    min-height: 611px;
     padding: 51px 80px;
     border-radius: 16px;
     color: $color-charcoal;
     background-color: $color-default-white;
 
+    @include vp-1199 {
+      padding: 54px 80px;
+      min-height: 602px;
+    }
+
     @include vp-767 {
       width: 100%;
       padding: 15px 15px 38px 15px;
+      min-height: 521px;
     }
   }
 
@@ -143,6 +150,11 @@
   text-align: center;
   margin: 0;
 
+  @include vp-1199 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
   @include vp-767 {
     font-size: 18px;
     line-height: 18px;
@@ -155,7 +167,13 @@
   text-align: center;
   line-height: 26px;
   margin-top: 8px;
-  margin-bottom: 6px;
+  margin-bottom: 19px;
+
+  @include vp-1199 {
+    line-height: 20px;
+    margin-top: 14px;
+    margin-bottom: 21px;
+  }
 
   @include vp-767 {
     font-size: 14px;
@@ -172,10 +190,9 @@
   width: 56%;
   margin: 0 auto;
   padding: 19px 72px 19px 22px;
-  margin-top: -11px;
+  margin-top: -38px;
 
   &::after {
-    top: 4px;
     right: 4px;
   }
 
@@ -189,13 +206,11 @@
 .modal__button svg {
   position: absolute;
   content: "";
-  top: 22px;
   right: 22px;
   z-index: 10;
   stroke: $color-default-white;
 
   @include vp-767 {
-    top: 14px;
     right: 15px;
   }
 }

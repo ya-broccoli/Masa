@@ -7,9 +7,17 @@
   flex-direction: column;
   gap: 10px 0;
 
+  &--secondary {
+    padding: 25px 0 6px;
+  }
+
 
   @include vp-1199 {
     padding: 40px 0 6px;
+
+    &--secondary {
+      padding: 26px 0 6px;
+    }
   }
 
   @media screen and (max-width: 767px) {
@@ -37,6 +45,7 @@
 
     &--secondary {
       color: rgba($color-charcoal, 0.8);
+      top: 7px;
     }
 
     @media screen and (max-width: 767px) {

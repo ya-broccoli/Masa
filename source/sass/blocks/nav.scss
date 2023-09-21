@@ -1,13 +1,17 @@
 .nav {
   width: 286px;
   max-height: 398px;
-  padding: 35px 25px;
+  padding: 30px 25px;
   background-color: $color-cerulean-blue;
   border-radius: 16px;
   overflow-y: auto;
   visibility: hidden;
   transform: translate(50%, -50%) scale(0);
   transition: all 0.3s ease;
+
+  @include vp-767 {
+    padding: 29px 25px 30px 24px;
+  }
 }
 
 .nav.is-opened {
@@ -35,7 +39,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px 0;
+  gap: 15px 0;
 }
 
 .nav__link {
@@ -58,26 +62,39 @@
 
 .nav__sub-nav-list {
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 16px;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 5px 0;
+  gap: 4px 0;
+}
+
+.nav__item.is-active .nav__sub-nav-list {
+  margin-top: 10px;
+
+  @include vp-767 {
+    margin-top: 9px;
+  }
 }
 
 .nav__sub-nav-list a {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-left: 16px;
   line-height: 16px;
   text-transform: none;
+  letter-spacing: 0.03px;
+  overflow: hidden;
 }
 
 .nav__link-icon {
   fill: none;
   stroke: rgba($color-default-white, 0.7);
   margin-left: 5px;
+
+  @include vp-767 {
+    margin-left: 7px;
+  }
 }
 
 .nav__item.is-active .nav__link-icon {
