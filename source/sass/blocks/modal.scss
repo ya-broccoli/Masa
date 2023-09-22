@@ -102,6 +102,21 @@
       top: 17px;
       right: 21px;
     }
+
+    &:hover,
+    &:focus {
+      outline: none;
+
+      svg {
+        opacity: 0.5;
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 1;
+      }
+    }
   }
 
   &--responsive {
@@ -191,6 +206,7 @@
   margin: 0 auto;
   padding: 19px 72px 19px 22px;
   margin-top: -38px;
+  background-color: $color-transparent;
 
   &::after {
     right: 4px;
@@ -201,6 +217,32 @@
     padding: 14px 59px 15px 22px;
     margin-top: -7px;
   }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:active {
+    background-color: $color-cerulean-blue;
+    color: rgba($color-default-white, 0.7);
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+}
+
+.modal__button:hover svg,
+.modal__button:focus svg,
+.modal__button:active svg {
+  stroke: $color-cerulean-blue;
 }
 
 .modal__button svg {

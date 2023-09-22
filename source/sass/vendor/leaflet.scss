@@ -79,9 +79,12 @@
 .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
   -ms-touch-action: none;
   touch-action: none;
+  border-radius: 16px;
+  overflow: hidden;
 }
 .leaflet-container {
   -webkit-tap-highlight-color: transparent;
+  border-radius: 16px;
 }
 .leaflet-container a {
   -webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);

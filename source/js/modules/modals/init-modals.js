@@ -1,4 +1,5 @@
 import {Modals} from './modals';
+import './autofocus';
 
 let modals;
 
