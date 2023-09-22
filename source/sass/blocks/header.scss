@@ -73,6 +73,7 @@
   padding-right: 222px;
   background-color: $color-cerulean-blue;
   color: $color-default-white;
+  z-index: 3;
 
   &::after {
     background-color: $color-default-white;

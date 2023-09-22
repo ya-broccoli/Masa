@@ -4,13 +4,12 @@
   top: 0;
   height: 100vh;
   width: 100vw;
-  background: $overlay-form;
-  opacity: 0.5;
+  background: rgba(13, 29, 51, 0.4);
   z-index: 2;
 
   display: none;
 }
 
-.overlay.is-active {
+.overlay.is-opened {
   display: block;
 }

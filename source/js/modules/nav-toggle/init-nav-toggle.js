@@ -4,6 +4,7 @@ const initNavToggles = () => {
   const root = document.querySelector('.header');
   const toggle = root.querySelector('.header__toggle');
   const nav = root.querySelector('.nav');
+  const overlay = document.querySelector('.overlay');
 
   const onDocumentKeydown = (evt) => {
     return evt.key === 'Escape' ? closeMenu() : null;
@@ -21,6 +22,7 @@ const initNavToggles = () => {
     root.classList.add(OPENED_CLASS);
     toggle.classList.add(OPENED_CLASS);
     nav.classList.add(OPENED_CLASS);
+    overlay.classList.add(OPENED_CLASS);
     document.addEventListener('keydown', onDocumentKeydown);
     document.addEventListener('click', isMenu);
     nav.addEventListener('click', onLinkClick);
@@ -31,6 +33,7 @@ const initNavToggles = () => {
     root.classList.remove(OPENED_CLASS);
     toggle.classList.remove(OPENED_CLASS);
     nav.classList.remove(OPENED_CLASS);
+    overlay.classList.remove(OPENED_CLASS);
     document.removeEventListener('keydown', onDocumentKeydown);
     document.removeEventListener('click', isMenu);
     nav.removeEventListener('click', onLinkClick);
