@@ -1166,6 +1166,7 @@ button.swiper-pagination-bullet {
 }
 
 .leaflet-container {
+  border-radius: 50%;
   overflow: hidden;
 }
 

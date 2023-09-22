@@ -860,8 +860,13 @@
                   </li>
                 </ul>
               </div>
-              <div class="contacts__map">
-                <div class="contacts__map-wrapper" id="map">
+              <div class="contacts__map" style="
+                  position: relative;
+                  z-index: 1;
+                  border-radius: 16px;
+                  overflow: hidden;
+                  ">
+                <div class="contacts__map-wrapper" id="map" style="border-radius: inherit;">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="./img/map/map-mobile.webp, ./img/map/map-mobile@2x.webp 2x" width="290" height="240">
                     <source type="image/webp" media="(max-width: 1199px)" srcset="./img/map/map-tablet.webp, ./img/map/map-tablet@2x.webp 2x" width="678" height="500">
